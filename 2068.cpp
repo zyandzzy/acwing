@@ -52,8 +52,11 @@ int main()
        ans+=hp[len][(k-t)%k];
        
        LL r = t;
-       //判断是否重复,通过找出自身在对应哈希表中的值，与-ai%k对比，若相等，说明i==j,答案要-1
-       for(int i = 0;i<len,i++) r = r*10%k;
+       //判断是否重复,通过找出自身在对应哈希表中的值，与-ai%k对比，若相等，说明i==j,答案要-1;
+     
+       for(int i = 0;i < len;i++)
+        r = r*10%k;
+       
        if(r == (k-t)%k) ans--;
     }
     cout<<ans;
